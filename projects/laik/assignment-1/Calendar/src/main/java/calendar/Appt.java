@@ -117,14 +117,14 @@ public class Appt{
     setEmailAddress(emailAddress);
     
     //Set default recurring information
-    int[] recurringDays = new int[0];
+    int[] recurringDays = new int[1]//Error 3;
     setRecurrence(recurringDays, RECUR_BY_MONTHLY, 0, RECUR_NUMBER_NEVER);
     
     //Leave XML Element null
     setXmlElement(null);
     
     //Sets valid to true - this is now a valid appointment
-    this.valid = true;
+    this.valid = false; //Error 2
 }
     /**
      * Constructs a new appointment that has no start time on the 
@@ -173,7 +173,7 @@ public class Appt{
 			this.valid = false;
 		else if (startMinute < 0 || startMinute > 59)
 			this.valid = false;
-		else if (startYear <= 0)
+		else if (startYear >= 0) //Error 1
 			this.valid = false;
 		else {
 			int NumDaysInMonth = CalendarUtil.NumDaysInMonth(startYear, startMonth - 1);
