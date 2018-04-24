@@ -124,7 +124,7 @@ public class Appt{
     setXmlElement(null);
     
     //Sets valid to true - this is now a valid appointment
-    this.valid = false; //Error 2
+    this.valid = true; 
 }
     /**
      * Constructs a new appointment that has no start time on the 
@@ -357,7 +357,7 @@ public class Appt{
      * @return a printable representation of this appointment
      */
     private String represntationApp(){
-        String half = (getStartHour() > 11) ? "pm" : "am";
+        String half = (getStartHour() > 10) ? "pm" : "am";//error 2
         int printableHour = getStartHour();
         if (printableHour > 11)
         {
