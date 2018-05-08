@@ -11,10 +11,8 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test00()  throws Throwable  {
       Appt appt0 = new Appt(15, 30, 9, 14, 2018, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
-      String string0 = appt0.toString();
       assertEquals(2, appt0.getRecurBy());
       assertFalse(appt0.isRecurring());
-      assertEquals("\t14/9/2018 at 3:30pm ,Birthday Party, This is my birthday party\n", string0);
       assertEquals(0, appt0.getRecurIncrement());
       appt0.setValid();
       assertFalse(appt0.isOn(14, 9, 2018));
@@ -47,16 +45,34 @@ public void test04()  throws Throwable  {
     Appt appt0 = new Appt(15, 30, 14, 9, 2018, "Back to TW", "Time to go back", "GG@gmail.com");
     assertFalse(appt0.isRecurring());
     assertEquals(0, appt0.getRecurIncrement());
-    appt0.setValid();
     assertTrue(appt0.isOn(14, 9, 2018));
+}
+@Test(timeout = 4000)
+public void test05()  throws Throwable  {
+	Appt appt0 = new Appt(0, 0, 1, 1, 1, "Back to TW", "Time to go back", "GG@gmail.com");
+	appt0.setValid();
+	assertTrue(appt0.getValid());
+}
+@Test(timeout = 4000)
+public void test06()  throws Throwable  {
+	Appt appt0 = new Appt(23, 59, 31, 12, 1, "Back to TW", "Time to go back", "GG@gmail.com");
+	appt0.setValid();
+	assertTrue(appt0.getValid());
 }
 
 @Test(timeout = 4000)
-public void test05()  throws Throwable  {
-    Appt appt0 = new Appt(-1, 30, 14, -1, 2018, "Back to TW", "Time to go back", "GG@gmail.com");
-    assertFalse(appt0.isRecurring());
-    assertEquals(0, appt0.getRecurIncrement());
-    appt0.setValid();
+public void test07()  throws Throwable  {
+	Appt appt0 = new Appt(23, 59, 31, 12, 0, "Back to TW", "Time to go back", "GG@gmail.com");
+	appt0.setValid();
+	assertFalse(appt0.getValid());
 }
+
+@Test(timeout = 4000)
+public void test08()  throws Throwable  {
+	Appt appt1 = new Appt(11, 59, 4, 24, 2018, "Assignment 1 Due", "CS 344 Assignment 1 Due", "laik@gmail.com");
+	String string1 = appt1.toString();
+	assertEquals("\t24/4/2018 at 11:59am ,Assignment 1 Due, CS 344 Assignment 1 Due\n", string1);
+}
+
 
 }
