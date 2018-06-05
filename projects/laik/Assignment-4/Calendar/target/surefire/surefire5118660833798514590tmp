@@ -1,0 +1,27 @@
+#surefire
+#Mon Jun 04 19:53:17 PDT 2018
+testClassesDirectory=D\:\\Desktop\\CS362\\CS362-001-S2018\\projects\\laik\\assignment-4\\Calendar\\target\\test-classes
+classPathUrl.3=C\:\\Users\\YorkLai\\.m2\\repository\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar
+classPathUrl.2=C\:\\Users\\YorkLai\\.m2\\repository\\junit\\junit\\4.12\\junit-4.12.jar
+useManifestOnlyJar=true
+classPathUrl.1=D\:\\Desktop\\CS362\\CS362-001-S2018\\projects\\laik\\assignment-4\\Calendar\\target\\classes
+reportsDirectory=D\:\\Desktop\\CS362\\CS362-001-S2018\\projects\\laik\\assignment-4\\Calendar\\target\\surefire-reports
+classPathUrl.0=D\:\\Desktop\\CS362\\CS362-001-S2018\\projects\\laik\\assignment-4\\Calendar\\target\\test-classes
+providerConfiguration=org.apache.maven.surefire.junit4.JUnit4Provider
+testSuiteDefinitionTestSourceDirectory=D\:\\Desktop\\CS362\\CS362-001-S2018\\projects\\laik\\assignment-4\\Calendar\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Users\\YorkLai\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.12.4\\surefire-api-2.12.4.jar
+surefireClassPathUrl.0=C\:\\Users\\YorkLai\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit4\\2.12.4\\surefire-junit4-2.12.4.jar
+runOrder=filesystem
+useSystemClassLoader=true
+excludes0=**/*$*
+isTrimStackTrace=true
+tc.2=calendar.DataHandlerRandomTest
+tc.1=calendar.CalDayRandomTest
+tc.0=calendar.ApptRandomTest
+enableAssertions=true
+includes2=**/*TestCase.java
+failIfNoTests=false
+includes1=**/*Test.java
+runStatisticsFile=D\:\\Desktop\\CS362\\CS362-001-S2018\\projects\\laik\\assignment-4\\Calendar\\.surefire-9A6C571B1D3564B1016D8BE7668734817E192C58
+includes0=**/Test*.java
+childDelegation=false
